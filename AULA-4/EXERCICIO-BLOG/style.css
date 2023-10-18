@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --color-text-default: #fff;
+    --color-blue-light: #3876bf;
+    --color-blue-dark: #192655;
+    --color-beige: #e1aa74;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text-default);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.title {
+    text-align: center;
+    color: var(--color-blue-dark);
+
+    margin-bottom: 20px;
+}
+
+/* ---- */
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-flow: row wrap;
+
+    background: linear-gradient(to right, #3876bf 35.37%, #192655 100.3%);
+    padding: 25px;
+
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    position: sticky;
+    top: 20px;
+}
+
+.logo-img {
+    height: 120px;
+    object-fit: cover;
+    border-radius: 60px;
+}
+
+.logo-img:hover {
+    animation: rotating 2s linear infinite;
+}
+
+.navigation-options {
+    display: flex;
+    gap: 40px;
+}
+
+.navigation-options li {
+    font-size: 30px;
+    position: relative;
+}
+
+.navigation-options a::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+
+    margin-top: 2px;
+
+    width: 0px;
+    height: 5px;
+
+    background-color: var(--color-beige);
+    border-radius: 30px;
+}
+
+.navigation-options a:hover::after {
+    width: 100%;
+    transition: width 0.5s ease;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+
+    padding: 20px 0;
+}
+
+#home p::first-letter {
+    font-size: 42px;
+    line-height: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: var(--color-blue-dark);
+}
+
+.cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 45px;
+}
+
+.card {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    transition: 0.6s ease-in-out;
+
+    transform: scale(1.1) rotate(5deg);
+}
+
+.card img {
+    height: 450px;
+    object-fit: cover;
+
+    border-radius: 30px;
+
+    border: 1px solid var(--color-blue-dark);
+}
+
+.card p,
+.card h2 {
+    position: absolute;
+
+    display: none;
+
+    top: 40%;
+    bottom: 60%;
+    left: 0;
+
+    text-align: center;
+
+    color: var(--color-text-default);
+    line-height: 22px;
+    font-size: 22px;
+
+    background-color: var(--color-beige);
+    padding: 10px;
+    margin-right: 10px;
+
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    height: fit-content;
+}
+
+.card h2 {
+    top: 20%;
+    bottom: 80%;
+    left: 0;
+
+    background-color: var(--color-blue-light);
+
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.card:hover p,
+.card:hover h2 {
+    display: block;
+}
+
+#about p::first-letter {
+    font-size: 42px;
+    line-height: 0;
+}
+
+#foot {
+    background: linear-gradient(to right, #3876bf 35.37%, #192655 100.3%);
+    padding: 25px;
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    text-align: center;
+
+    color: var(--color-text-default);
+}
+
+#foot a:hover {
+    text-decoration: underline;
+}
+
+#foot .socials {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+
+    margin-top: 12px;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 481px) {
+    .navigation-options {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .card img {
+        height: 250px;
+    }
+}

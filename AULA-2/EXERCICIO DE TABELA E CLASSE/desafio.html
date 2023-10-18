@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Desafio</title>
+    </head>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        main {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1440px;
+
+            padding: 1.25rem;
+
+            height: calc(100vh - 100px);
+
+            display: grid;
+            place-content: center;
+
+            animation: toTop 1s backwards;
+        }
+
+        .header {
+            text-align: start;
+            margin: 10px 0;
+        }
+
+        .header > h1 {
+            text-align: center;
+        }
+
+        .list-header {
+            list-style: circle;
+            list-style-position: inside;
+        }
+
+        table {
+            text-align: center;
+            border-collapse: collapse;
+
+            width: 100%;
+
+            margin-top: 2rem;
+        }
+
+        thead {
+            background-color: #000;
+            color: #fff;
+        }
+
+        tbody {
+            cursor: pointer;
+        }
+
+        tbody td {
+            padding: 1rem;
+        }
+
+        img {
+            width: 80px;
+            max-width: 100px;
+
+            border-radius: 6px;
+        }
+
+        tbody tr:nth-child(even) {
+            color: #fff;
+            background-color: #1010ac;
+        }
+
+        tbody tr:nth-child(odd) {
+            color: #fff;
+            background-color: #10acaa;
+        }
+
+        tbody tr:hover:nth-child(even) {
+            background-color: #aaa;
+        }
+
+        tbody tr:hover:nth-child(odd) {
+            background-color: #aaa;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin: 2rem;
+            color: var(--legend-and-footer);
+
+            animation: toLeft 1s backwards;
+        }
+
+        footer a {
+            color: var(--legend-and-footer);
+        }
+
+        footer a:hover {
+            color: #000;
+            cursor: pointer;
+        }
+
+        @keyframes toTop {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes toLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-80px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+    <body>
+        <main>
+            <section class="challenge">
+                <div class="header">
+                    <h1>Desafio - Aula 2:</h1>
+
+                    Criar uma tabela com no mínimo 4 filmes ou séries famosos,
+                    essa tabela deve ter as colunas:
+                    <ul>
+                        <li class="list-header">Nome</li>
+                        <li class="list-header">Nota</li>
+                        <li class="list-header">Imagem</li>
+                        <li class="list-header">
+                            Lista com pelo menos 2 atores
+                        </li>
+                    </ul>
+                    <p>
+                        → O Nome deve ter um link que direciona para a pagina do
+                        filme no site
+                        <a href="https://www.imdb.com/" style="color: #000"
+                            >imdb.com</a
+                        >
+                    </p>
+                    <p>→ A Imagem deve ter um width de 100px no máximo</p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Genero</th>
+                            <th>Nota</th>
+                            <th>Elenco</th>
+                            <th>Imagem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a
+                                    href="https://www.imdb.com/title/tt10160976/?ref_=chtbo_t_7"
+                                    target="_blank"
+                                    >A Freira 2
+                                </a>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Terror</li>
+                                    <li>Mistério</li>
+                                    <li>Suspense</li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <p>5,7</p>
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li>Taissa Farmiga</li>
+                                    <li>Jonas Bloquet</li>
+                                    <li>Storm Reid</li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <img
+                                    src="https://m.media-amazon.com/images/M/MV5BNTIyNzQ5M2MtYTA2Ny00ZWM1LTlmNzYtNjhjNDkxYjBkNjhkXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg"
+                                    alt="Imagem do Filme A Freira 2"
+                                />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <a
+                                    href="https://www.imdb.com/title/tt21807222/?ref_=chtbo_t_3"
+                                    target="_blank"
+                                    >Jogos Mortais X
+                                </a>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Terror</li>
+                                    <li>Mistério</li>
+                                    <li>Suspense</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <p>7,1</p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Tobin Bell</li>
+                                    <li>Shawnee Smith</li>
+                                    <li>Synnøve Macody Lund</li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <img
+                                    src="https://m.media-amazon.com/images/M/MV5BOTM5OTQzOWMtYTE1YS00NjZkLTg2ZTctMTNmYzUzODNkYWY5XkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg"
+                                    alt="Imagem do Filme Jogos Mortais X"
+                                />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <a
+                                    href="https://www.imdb.com/title/tt12921446/?ref_=chtbo_t_1"
+                                    target="_blank"
+                                    >O Exorcista: O Devoto
+                                </a>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Terror</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <p>5,1</p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Linda Blair</li>
+                                    <li>Ellen Burstyn</li>
+                                    <li>Jennifer Netles</li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <img
+                                    src="https://m.media-amazon.com/images/M/MV5BYjhjMTY1MjktODFjZC00YjE5LTlhMzktMWE2ZDQ0ZDU0ZGRkXkEyXkFqcGdeQXVyMTQ3MjQ4Nzc4._V1_.jpg"
+                                    alt="Imagem do Filme O Exorcista: O Devoto"
+                                />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <a
+                                    href="https://www.imdb.com/title/tt22687790/?ref_=chtbo_t_6"
+                                    target="_blank"
+                                    >A Noite das Bruxas
+                                </a>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Policial</li>
+                                    <li>Drama</li>
+                                    <li>Terror</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <p>6,8</p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Kenneth Branagh</li>
+                                    <li>Michelle Yeoh</li>
+                                    <li>Jamie Dornan</li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMGNjMTNjMDEtOGFkMi00N2ZlLTgyMTUtYmRiMjcxMzcyMDc3XkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg"
+                                    alt="Imagem do Filme A Noite das Bruxas"
+                                />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer>
+            <p>
+                Feito pelo camisa 🔟
+                <a href="https://github.com/eomgn" target="_blank">MGN</a>
+            </p>
+        </footer>
+    </body>
+</html>

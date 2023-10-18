@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exercicio 1</title>
+    </head>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        main {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1440px;
+
+            height: 100vh;
+
+            display: grid;
+            place-content: center;
+        }
+
+        .header {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .header > p {
+            margin-top: 2rem;
+        }
+
+        code {
+            background-color: #bbb;
+            padding: 2px;
+            border-radius: 6px;
+        }
+
+        table {
+            text-align: center;
+            border-collapse: collapse;
+
+            width: 100%;
+        }
+
+        thead {
+            background-color: #000;
+            color: #fff;
+        }
+
+        tbody {
+            cursor: pointer;
+        }
+
+        tbody tr:nth-child(even) {
+            color: #fff;
+            background-color: #1010ac;
+        }
+
+        tbody tr:hover:nth-child(even) {
+            color: #fff;
+            background-color: #10acaa;
+        }
+
+        tbody tr:hover:nth-child(odd) {
+            color: #000;
+            background-color: #10acaa;
+        }
+    </style>
+    <body>
+        <main>
+            <section>
+                <div class="header">
+                    <h1>Exercício 1:</h1>
+                    <p>
+                        Criar uma tabela de alunos com as notas das últimas 4
+                        provas(nota1, nota2, nota3, nota4) utilizando
+                        <code>thead</code> e <code>tbody</code>:
+                    </p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Nota 1</th>
+                            <th>Nota 2</th>
+                            <th>Nota 3</th>
+                            <th>Nota 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Goku</td>
+                            <td>10</td>
+                            <td>9</td>
+                            <td>8</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>Gohan</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Vegeta</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Majin Boo</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </body>
+</html>
